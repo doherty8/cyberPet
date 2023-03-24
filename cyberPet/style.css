@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    font-family: 'Nunito' , sans-serif;
+}
+
+body{
+    background: rgb(169, 198, 208);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(./images/background1.jpeg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    margin:auto;
+    padding: auto;
+}
+
+
+.mainContainerIndex {
+    width: 100%;
+    height: fit-content;
+    display: inline-block;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+
+h2, .selectPet{
+    width: 100%;
+    color: rgb(36, 26, 64);
+    font-size: 3.5vw;
+    font-weight: unset;
+    text-align: center;
+    display: block;
+    letter-spacing: 3px;
+}
+
+.selectPet {
+    font-size: 20px;
+}
+
+
+.text{
+    transform: scale(0.66);
+}
+
+button {
+    all:unset;
+    max-width: 50%;
+    max-height: 50%;
+    width: 25%;
+    height: 25%;
+    margin: 4%;
+    margin-top: 10%;
+    border: none;
+    padding:0; 
+    border-radius: 70%;
+}
+
+.petButtonContainer {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pics {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+    position: center;
+    border-radius: 50%;
+    border: 5px solid   rgb(215, 221, 98);
+}
+
+.pics:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+    box-shadow: 20px 20px 50px rgb(0, 98, 2);
+
+  }
+
+#charImage {
+    width: 40%;
+    border-radius: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border: 3px solid rgb(172, 16, 16);
+}
+
+#squirtleImage {
+    width: 40%;
+    border-radius: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border: 3px solid rgb(82, 133, 250);
+}
+
+#message{
+    width: 100%;
+    color: rgb(51, 93, 109);
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: '' , sans-serif;
+    text-align: center;
+    display: block;
+    letter-spacing: 3px;
+}
+
+#restart {
+    all:unset;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: none;
+    color: rgb(51, 93, 109);
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: '' , sans-serif;
+    text-align: center;
+    display: block;
+    letter-spacing: 3px;
+}
+
+#restart:hover {
+    
+    transform: scale(1.1);
+    background-color: rgb(255, 255, 255, 0.9);
+    cursor: pointer;
+
+}
+
+#buttonContainer{
+    all:unset;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+#feedBtn, #sleepBtn, #playBtn, #pokeBtn {
+    all:unset;
+    color:azure;
+    background-color: rgb(255, 100, 126, 0.3);
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: '' , sans-serif;
+    text-align: center;
+    letter-spacing: 4px;
+    padding: 1%;
+    margin-left: 12%;
+    margin-top: 2% ;
+}
+
+
+#bulbImage {
+    width: 30%;
+    border-radius: 10%;
+    box-shadow: 10px 10px 25px rgba(208,169,197,1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border: 3px solid rgb(3, 146, 5);
+}
+
+
+/*Can't get flexbox to work on the parent for some reason*/
+
+#buttonContainer{
+    display: flex;
+    justify-content: space-between
+}

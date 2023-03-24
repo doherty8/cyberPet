@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Cyber Pet</title>
+</head>
+
+<body>
+	<div id = "mainContainerIndex">
+
+		<h1 id = 'mainTitle'><img class="heading" src="./images/heading.png"/></h1><br><br>
+
+		<div class = "screenIndex">
+
+			<div id = "petButtonContainer">
+				
+				<button id='charPic' data-name="Charmander"><img class='pics' src='./images/charmander.jpeg' alt='link' style='width:300px;height:300px;'><audio id='audioChar' autoplay='false'></audio></button>
+                
+				<button id = 'squirtlePic' data-name="Squirtle"><img class= "pics" src="./images/squirtle2.avif" alt="link" style="width:300px;height:300px;"><audio id = "audioSquirtle" autoplay = "false"></audio></button>
+	
+				<button id ='bulbPic' data-name="Bulbasaur"><img class= "pics" src="./images/bulbasaur3.png" alt="link" style="width:300px;height:300px;"><audio id = "audioBulb" autoplay = "false"></audio></button>
+
+				<p><span class="window"></span><span id="insert-name"></span></p>
+
+			</div>
+
+            <p class = "selectPet"><img class="text" src="./images/selectYourPokemon.png"></p>
+
+	</div>
+</div> 
+
+
+<!---Your Pokemon-->
+
+			<h2 id = 'gameTitle'>Your Pokemon</h2>
+
+
+<!---Start Again button-->
+	
+<button id = "restart">Start Again</button>
+
+<div id = 'game'>
+	
+	<p id= "message"></p>    
+
+<!-- Charmander -->
+
+
+			<div id = "charContainer">
+		
+				<div id="screen">
+		
+				 <img id = "charImage" src = "./images/pokemon-charmander.gif" style="width:300px;height:300px;"> <!---add image--> 
+
+				</div> 
+			</div>
+
+<!---Squirtle-->
+
+			<div id = "squirtleContainer">
+		
+				<div id="screenSquirtle">
+		
+					<img id = "squirtleImage" src = "./images/squirtle.jpg" alt = "Squirtle image" style="width:300px;height:300px;">              <!---add image--> 
+
+				</div> 
+			</div>
+
+<!---Bulbasaur-->
+			<div id = "bulbContainer">
+		
+				<div id="screenBulb">
+		
+					<img id = "bulbImage" src = "./images/bulbasaur3.png" style="width:300px;height:300px;">         <!---add image--> 
+
+
+					</div>
+			</div>
+</div>
+<!---action button-->
+<div id = "buttonContainer">
+	<div id="charBtn">
+		<button id="feedBtnChar">Feed Apple</button>
+		<button id="sleepBtnChar">Sleep</button>
+		<button id="battleBtnChar">Battle</button>  
+		<button id="trainBtnChar">Train Flamethrower Attack</button>
+	</div>
+	<div id="squirtleBtn">
+		<button id="feedBtnSquirtle">Feed Fish</button>
+		<button id="sleepBtnSquirtle">Sleep</button>
+		<button id="battleBtnSquirtle">Battle</button>
+		<button id="trainBtnSquirtle">Train Aqua Jet Attack</button>
+	</div>
+	<div id="bulbBtn">
+		<button id="feedBtnBulb">Feed Berries</button>
+		<button id="sleepBtnBulb">Sleep</button>
+		<button id="battleBtnBulb">Battle</button>
+		<button id="trainBtnBulb">Train Power Whip Attack</button>
+	</div>
+</div>
+
+			
+	<script src = "./app.js"></script>
+	<script src = "./petapp.js"></script>
+</body>
+</html>
+
