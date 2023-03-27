@@ -1,100 +1,96 @@
-//Pet Class//
-class CyberPet {
-    constructor(name){
-        this._name = name;
-        this._sleepy = 40;
-        this._hungry = 40;
-        this._bored = 40;
+class Pet {
+    constructor(name, initialValue, bar, addButton, refillFunction, interval) {
+      this.name = name;
+      this.value = initialValue;
+      this.bar = bar;
+      this.addButton = addButton;
+      this.refillFunction = refillFunction;
+      this.interval = interval;
+      this.isDead = false;
+  
+      this.intervalId = setInterval(() => {
+        if (this.isDead) return;
+  
+        this.value -= 1;
+        this.bar.style.width = `${this.value}%`;
+  
+        if (this.value <= 0) {
+          this.isDead = true;
+          const deathMsg = "Your pet has blacked out!";
+          const msgTag = document.querySelector('#message');
+          let messageIdx = 0;
+          const messageIntervalId = setInterval(() => {
+            messageIdx++;
+            msgTag.textContent = deathMsg.slice(0, messageIdx);
+            if (messageIdx >= deathMsg.length) {
+              clearInterval(messageIntervalId);
+            }
+          }, 200);
+        }
+      }, this.interval);
+  
+      this.addButton.addEventListener('click', () => {
+        if (this.value > 0 ) {
+          const randomAmount = this.refillFunction();
+          this.value += randomAmount;
+          if (this.value > 100) {
+            this.value = 100;
+          }
+          this.bar.style.width = `${this.value}%`;
+        } else {
+          this.addButton.disabled = true;
+        }
+      });
     }
-    get name(){
-        return this.name.charAt(0).toUpperCase() + this._name.slice(1);
+  }
+  
+  class Char extends Pet {
+    constructor() {
+      super(Pet.name, 100, document.querySelector('#hungerBarChar'), document.querySelector('#feedBtnChar'), () => {
+        return Math.floor(Math.random() * (4 - 2 + 1) + 2);
+      }, 600);
+      this.sleepBar = new Pet(Pet.name, 100, document.querySelector('#sleepBarChar'), document.querySelector('#sleepBtnChar'), () => {
+        return Math.floor(Math.random() * (5 - 2 + 1) + 1);
+      }, 900);
+      this.battleBar = new Pet(Pet.name, 100, document.querySelector('#battleBarChar'), document.querySelector('#battleBtnChar'), () => {
+        return Math.floor(Math.random() * (7 - 3 + 1) + 3);
+      }, 500);
+      this.trainBar = new Pet(Pet.name, 100, document.querySelector('#trainBarChar'), document.querySelector('#trainBtnChar'), () => {
+        return Math.floor(Math.random() * (7 - 3 + 1) + 3);
+      }, 1050);
     }
-    get hungry() {
-        return this._hungry;
-    }
-    get energy(){
-        return this._sleepy;
-    }
+  }
 
-    feed() {
-        this._hungry -= 6;
-        this._sleepy += 3;
-    
-    if (this._hungry >= 80){
-        message.textContent = `Your cyber pet ${petName} is hungry`
-    }else if (this._hungry <=0){
-        message.textContent = `Your cyber pet ${petName} is full`
-    }else{
-        message.textContent = `Your cyber pet ${petName} is eating. Hunger levels at ${this._hungry}`
-    }   
-}
-    sleep() {
-        this._sleepy -= 6;
-        this._bored += 3;
-
-    if (this._sleepy >= 80) {
-        message.textContent = `Your cyber pet ${petName} is tired.`
-    }else if (this._sleepy <=0) {
-        message.textContent = `Your cyber pet ${petName} is fully rested.`
-    }else{
-        message.textContent = `Your cyber pet ${petName} is sleeping. Sleepy levels at ${this._sleepy}`
+  class Squirtle extends Pet {
+    constructor() {
+      super(Pet.name, 100, document.querySelector('#hungerBarSquirtle'), document.querySelector('#feedBtnSquirtle'), () => {
+        return Math.floor(Math.random() * (7 - 3 + 1) + 3);
+      }, 650);
+      this.sleepBar = new Pet(Pet.name, 100, document.querySelector('#sleepBarSquirtle'), document.querySelector('#sleepBtnSquirtle'), () => {
+        return Math.floor(Math.random() * (7 - 3 + 1) + 3);
+      }, 950);
+      this.battleBar = new Pet(Pet.name, 100, document.querySelector('#battleBarSquirtle'), document.querySelector('#battleBtnSquirtle'), () => {
+        return Math.floor(Math.random() * (7 - 3 + 1) + 3);
+      }, 1250);
+      this.trainBar = new Pet(Pet.name, 100, document.querySelector('#trainBarSquirtle'), document.querySelector('#trainBtnSquirtle'), () => {
+        return Math.floor(Math.random() * (7 - 3 + 1) + 3);
+      }, 850);
     }
-}
-    battle() {
-        this._sleepy += 3;
-        this._hungry += 3;
-        this._bored -= 6;
+  }
 
-    if (this._bored >= 80) {
-        message.textContent = `Your cyber pet ${petName}, is bored.`
-    }else if (this._bored <= 0) {
-        message.textContent = `Your cyber pet ${petName}, is happy.`
-    }else { 
-        message.textContent = `Your cyber pet ${petName}, is playing. Boredom levels at ${this._bored}`
-
-    }
-
-    }
-} 
-
-
-//Charmander Class//
-class Char extends CyberPet {
-    constructor(name, train){
-    super(name)
-    }
-    train() {
-        this._bored += 6; 
-        message.textContent = `Poking your pet ${petName}, makes them playful!`
-        trainBtn.addEventListener("click",() =>{
-            audioChar.src ="sounds/char.mp3"
-        })
-    } 
-}
-
-//Squirtle Class//
-class Squirtle extends CyberPet {
-    constructor (name, train){
-        super(name)
-    }
-    train(){
-        this._sleepy += 6;
-        message.textContent = `Poking your pet ${petName}, was exhausting. They need to roll over and have a nap.`
-        trainBtn.addEventListener("click",() =>{
-            audioSquirtle.src ="sounds/Squirtle.mp3"
-        })
-    }
-}
-
-//Bulbasaur Class//
-class Bulb extends CyberPet {
-    constructor (name, train){
-        super(name)
-    }
-    train(){
-        message.textContent = `Your pet ${petName} does not like being poked! Be careful or he will abduct you.`
-        trainBtn.addEventListener("click",() =>{
-            audioBulb.src ="./sounds/bulbasaur-1.mp3"
-        })
+  class Bulb extends Pet {
+    constructor() {
+      super(Pet.name, 100, document.querySelector('#hungerBarBulbasaur'), document.querySelector('#feedBtnBulb'), () => {
+        return Math.floor(Math.random() * (3 - 1 + 1) + 4);
+      }, 550);
+      this.sleepBar = new Pet(Pet.name, 100, document.querySelector('#sleepBarBulbasaur'), document.querySelector('#sleepBtnBulb'), () => {
+        return Math.floor(Math.random() * (8 - 2 + 1) + 1);
+      }, 350);
+      this.battleBar = new Pet(Pet.name, 100, document.querySelector('#battleBarBulbasaur'), document.querySelector('#battleBtnBulb'), () => {
+        return Math.floor(Math.random() * (7 - 3 + 1) + 3);
+      }, 1550);
+      this.trainBar = new Pet(Pet.name, 100, document.querySelector('#trainBarBulbasaur'), document.querySelector('#trainBtnBulb'), () => {
+        return Math.floor(Math.random() * (9 - 2 + 1) + 6);
+      }, 1250);
     }
 }
