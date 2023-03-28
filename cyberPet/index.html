@@ -49,10 +49,34 @@
 
 			<div id = "charContainer">
 		
-				<div id="screen">
-		
-				 <img id = "charImage" src = "./images/pokemon-charmander.gif" style="width:300px;height:300px;"> <!---add image--> 
+				<div class="pokeAvatar">
+					<img id = "charImage" src = "./images/pokemon-charmander.gif" style="width:300px;height:300px;">
+				</div>
+				
+				<div id="pokeStats">
+					<div id="pokeStatsChar">
+						<div class="charBars">
+							<div class="statBar">	
+								<div class="barFill" id="hungerBarChar"><span></span></div>
+							</div>
+							<div class="statBar">	
+								<div class="barFill" id="sleepBarChar"><span></span></div>
+							</div>
+							<div class="statBar">	
+								<div class="barFill" id="battleBarChar"><span></span></div>
+							</div>
+							<div class="statBar">	
+								<div class="barFill" id="trainBarChar"><span></span></div>
+							</div>
+						</div>
 
+						<div id="charBtn">
+							<button id="feedBtnChar">Feed Apple</button>
+							<button id="sleepBtnChar">Sleep</button>
+							<button id="battleBtnChar">Battle</button>  
+							<button id="trainBtnChar">Train Flamethrower</button>
+						</div>
+					</div>
 				</div> 
 			</div>
 
@@ -60,44 +84,70 @@
 
 			<div id = "squirtleContainer">
 		
-				<div id="screenSquirtle">
-		
-					<img id = "squirtleImage" src = "./images/squirtle.jpg" alt = "Squirtle image" style="width:300px;height:300px;">              <!---add image--> 
+				<div class="pokeAvatar">
+					<img id = "squirtleImage" src = "./images/squirtle.jpg" alt = "Squirtle image" style="width:300px;height:300px;">
+				</div>
 
+				<div id="pokeStats">
+						<div class="sqtlBars">
+							<div class="statBar"> 
+								<div class="barFillSqtl" id="hungerBarSquirtle"><span></span></div>
+							</div>
+							<div class="statBar">	
+								<div class="barFillSqtl statBarTextSleep" id="sleepBarSquirtle"><span></span></div>
+							</div>
+							<div class="statBar">	
+								<div class="barFillSqtl" id="battleBarSquirtle"><span></span></div>
+							</div>
+							<div class="statBar">	
+								<div class="barFillSqtl" id="trainBarSquirtle"><span></span></div>
+							</div>
+						</div>
+						<div id="squirtleBtn">
+							<button id="feedBtnSquirtle">Feed Fish</button>
+							<button id="sleepBtnSquirtle">Sleep</button>
+							<button id="battleBtnSquirtle">Battle</button>
+							<button id="trainBtnSquirtle">Train Aqua Jet</button>
+						</div>
 				</div> 
 			</div>
 
 <!---Bulbasaur-->
 			<div id = "bulbContainer">
 		
-				<div id="screenBulb">
-		
-					<img id = "bulbImage" src = "./images/bulbasaur3.png" style="width:300px;height:300px;">         <!---add image--> 
+				<div class="pokeAvatar">
+					<img id = "bulbImage" src = "./images/bulbasaur3.png" style="width:300px;height:300px;"> 
+				</div>
 
-
+				<div id="pokeStats">	
+					<div class="bulbBars">
+						<div class="statBar">	
+							<div class="barFillBulb" id="hungerBarBulbasaur"><span></span></div>
+						</div>
+						<div class="statBar">	
+							<div class="barFillBulb" id="sleepBarBulbasaur"><span></span></div>
+						</div>
+						<div class="statBar">	
+							<div class="barFillBulb" id="battleBarBulbasaur"><span></span></div>
+						</div>
+						<div class="statBar">	
+							<div class="barFillBulb" id="trainBarBulbasaur"><span></span></div>
+						</div>
+					</div>
+					<div id="bulbBtn">
+						<button class="BtnBulb" id="feedBtnBulb">Feed Berries</button>
+						<button class="BtnBulb" id="sleepBtnBulb">Sleep</button>
+						<button class="BtnBulb" id="battleBtnBulb">Battle</button>
+						<button class="BtnBulb" id="trainBtnBulb">Train Power Whip</button>
+					</div>
+				</div>
 					</div>
 			</div>
 </div>
 <!---action button-->
 <div id = "buttonContainer">
-	<div id="charBtn">
-		<button id="feedBtnChar">Feed Apple</button>
-		<button id="sleepBtnChar">Sleep</button>
-		<button id="battleBtnChar">Battle</button>  
-		<button id="trainBtnChar">Train Flamethrower Attack</button>
-	</div>
-	<div id="squirtleBtn">
-		<button id="feedBtnSquirtle">Feed Fish</button>
-		<button id="sleepBtnSquirtle">Sleep</button>
-		<button id="battleBtnSquirtle">Battle</button>
-		<button id="trainBtnSquirtle">Train Aqua Jet Attack</button>
-	</div>
-	<div id="bulbBtn">
-		<button id="feedBtnBulb">Feed Berries</button>
-		<button id="sleepBtnBulb">Sleep</button>
-		<button id="battleBtnBulb">Battle</button>
-		<button id="trainBtnBulb">Train Power Whip Attack</button>
-	</div>
+	
+	
 </div>
 
 			
