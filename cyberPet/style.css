@@ -16,7 +16,7 @@ body{
     background-attachment: fixed;
     margin:auto;
     padding: auto;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .mainContainerIndex {
@@ -87,18 +87,21 @@ button {
     transform: translateY(-2px);
     cursor: pointer;
     box-shadow: 20px 20px 50px rgb(243, 103, 103);
+    cursor: url("./images/Pokeball1.cur"), auto;
 }
 
 .pics2:hover {
     transform: translateY(-2px);
     cursor: pointer;
     box-shadow: 20px 20px 50px skyblue;
+    cursor: url("./images/Pokeball1.cur"), auto;
 }
 
 .pics3:hover {
     transform: translateY(-2px);
     cursor: pointer;
     box-shadow: 20px 20px 50px green;
+    cursor: url("./images/Pokeball1.cur"), auto;
 }
 
 #gameTitle {
@@ -152,6 +155,7 @@ button {
     text-align: center;
     display: block;
     letter-spacing: 3px;
+    margin-bottom: 20px;
 }
 
 #restart:hover {
@@ -390,6 +394,7 @@ button {
 .pokeAvatar {
   margin: auto;
   width: fit-content;
+  padding-top: 10px;
 }
 
 #pokeStats {
@@ -425,4 +430,3 @@ button {
   box-shadow: inset 0px 0px 45px #a8a6a6;
   outline: none;
 }
-

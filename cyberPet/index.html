@@ -15,11 +15,11 @@
 
 			<div id = "petButtonContainer">
 				
-				<button id='charPic' data-name="Charmander"><img class='pics' src='./images/charmander.jpeg' alt='link' style='width:300px;height:300px;'><audio id='audioChar' autoplay='false'></audio></button>
+				<button id='charPic' data-name="Charmander"><img class='pics pics1' src='./images/charmander.jpeg' alt='link' style='width:300px;height:300px;'><audio id='audioChar' autoplay='false'></audio></button>
                 
-				<button id = 'squirtlePic' data-name="Squirtle"><img class= "pics" src="./images/squirtle2.avif" alt="link" style="width:300px;height:300px;"><audio id = "audioSquirtle" autoplay = "false"></audio></button>
+				<button id = 'squirtlePic' data-name="Squirtle"><img class= "pics pics2" src="./images/squirtle2.avif" alt="link" style="width:300px;height:300px;"><audio id = "audioSquirtle" autoplay = "false"></audio></button>
 	
-				<button id ='bulbPic' data-name="Bulbasaur"><img class= "pics" src="./images/bulbasaur3.png" alt="link" style="width:300px;height:300px;"><audio id = "audioBulb" autoplay = "false"></audio></button>
+				<button id ='bulbPic' data-name="Bulbasaur"><img class= "pics pics3" src="./images/bulbasaur3.png" alt="link" style="width:300px;height:300px;"><audio id = "audioBulb" autoplay = "false"></audio></button>
 
 				<p><span class="window"></span><span id="insert-name"></span></p>
 
@@ -33,12 +33,7 @@
 
 <!---Your Pokemon-->
 
-			<h2 id = 'gameTitle'>Your Pokemon</h2>
-
-
-<!---Start Again button-->
-	
-<button id = "restart">Start Again</button>
+	<h2 id = 'gameTitle' src=""></h2>
 
 <div id = 'game'>
 	
@@ -54,7 +49,6 @@
 				</div>
 				
 				<div id="pokeStats">
-					<div id="pokeStatsChar">
 						<div class="charBars">
 							<div class="statBar">	
 								<div class="barFill" id="hungerBarChar"><span></span></div>
@@ -77,7 +71,6 @@
 							<button id="trainBtnChar">Train Flamethrower</button>
 						</div>
 					</div>
-				</div> 
 			</div>
 
 <!---Squirtle-->
@@ -146,13 +139,22 @@
 </div>
 <!---action button-->
 <div id = "buttonContainer">
+
+	<!---Start Again button-->
 	
+<button id = "restart">Start Again</button>
+
 	
 </div>
 
 			
 	<script src = "./app.js"></script>
 	<script src = "./petapp.js"></script>
+	<script src = "./title.js"></script>
+	<script src = "./gif.js"></script>
+	<script src = "./gif2.js"></script>
+
+
+
 </body>
 </html>
-

@@ -16,7 +16,7 @@ class Pet {
   
         if (this.value <= 0) {
           this.isDead = true;
-          const deathMsg = "Your pet has blacked out!";
+          const deathMsg = "Your pet has blacked out! Please restart the game!";
           const msgTag = document.querySelector('#message');
           let messageIdx = 0;
           const messageIntervalId = setInterval(() => {
